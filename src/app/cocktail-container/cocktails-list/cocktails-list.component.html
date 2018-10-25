@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="list group col-12">
+    <a class="list-group-item list-group-item-action"
+       *ngFor="let cocktail of cocktails; let index = index;"
+       (click)="pickCocktail(index)">
+      {{cocktail.name}}
+    </a>
+  </div>
+</div>
+<hr>
+<div class="row"
+     style="padding-left: 10px">
+  <button class="btn btn-success">
+    Ajouter un cocktail
+  </button>
+</div>

@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Cocktail } from '../cocktail';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cocktail } from '../../shared/cocktail.model';
 
 @Component({
   selector: 'app-cocktail-details',
@@ -7,8 +7,7 @@ import { Cocktail } from '../cocktail';
   styleUrls: ['./cocktail-details.component.css']
 })
 export class CocktailDetailsComponent implements OnInit {
-  public cocktail = new Cocktail('Mojito', 'https://static.cuisineaz.com/400x320/i14978-recette-de-mojito.jpeg', 'Description Mojito');
-
+  @Input() cocktail: Cocktail;
   constructor() { }
 
   ngOnInit() {
