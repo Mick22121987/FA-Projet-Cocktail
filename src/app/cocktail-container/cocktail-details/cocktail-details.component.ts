@@ -8,10 +8,13 @@ import { CocktailService } from 'src/app/shared/services/cocktail.service';
   styleUrls: ['./cocktail-details.component.css']
 })
 export class CocktailDetailsComponent implements OnInit {
-  @Input() cocktail: Cocktail;
+  public cocktail: Cocktail;
   constructor(private cocktailService: CocktailService) { }
 
   ngOnInit() {
+    this.cocktailService.cocktail.subscribe( (cocktail: Cocktail) => {
+      this.cocktail = cocktail;
+    });
   }
 
 }
