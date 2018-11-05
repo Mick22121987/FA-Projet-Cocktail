@@ -2,7 +2,8 @@
   <div class="list group col-12">
     <a class="list-group-item list-group-item-action"
        *ngFor="let cocktail of cocktails; let index = index;"
-       (click)="pickCocktail(index)">
+       (click)="pickCocktail(index)"
+       [appActive]="index === activeCocktail">
       {{cocktail.name}}
     </a>
   </div>
